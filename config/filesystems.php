@@ -37,27 +37,33 @@ return [
         ],
 
         'uploads' => [
-            'driver' => 'local',
-            'root' => storage_path('app/uploads'),
-            'url' => '/storage/app/uploads',
-            'visibility' => 'public',
-            'throw' => false,
+            'driver' => 's3',
+            'key' => env('WAS_ACCESS_KEY_ID'),
+            'secret' => env('WAS_SECRET_ACCESS_KEY'),
+            'region' => env('WAS_DEFAULT_REGION'),
+            'bucket' => env('WAS_BUCKET'),
+            'endpoint' => 'https://s3.wasabisys.com',
+            'visibility' => 'public'
         ],
 
         'media' => [
-            'driver' => 'local',
-            'root' => storage_path('app/media'),
-            'url' => '/storage/app/media',
-            'visibility' => 'public',
-            'throw' => false,
+            'driver' => 's3',
+            'key' => env('WAS_ACCESS_KEY_ID'),
+            'secret' => env('WAS_SECRET_ACCESS_KEY'),
+            'region' => env('WAS_DEFAULT_REGION'),
+            'bucket' => env('WAS_BUCKET'),
+            'endpoint' => 'https://s3.wasabisys.com',
+            'visibility' => 'public'
+            
         ],
-
         'resources' => [
-            'driver' => 'local',
-            'root' => storage_path('app/resources'),
-            'url' => '/storage/app/resources',
-            'visibility' => 'public',
-            'throw' => false,
+            'driver' => 's3',
+            'key' => env('WAS_ACCESS_KEY_ID'),
+            'secret' => env('WAS_SECRET_ACCESS_KEY'),
+            'region' => env('WAS_DEFAULT_REGION'),
+            'bucket' => env('WAS_BUCKET'),
+            'endpoint' => 'https://s3.wasabisys.com',
+            'visibility' => 'public',    
         ],
 
         's3' => [
@@ -70,6 +76,14 @@ return [
             'endpoint' => env('AWS_ENDPOINT'),
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
             'throw' => false,
+        ],
+        'Wasabi' => [
+            'driver' => 's3',
+            'key' => env('WAS_ACCESS_KEY_ID'),
+            'secret' => env('WAS_SECRET_ACCESS_KEY'),
+            'region' => env('WAS_DEFAULT_REGION'),
+            'bucket' => env('WAS_BUCKET'),
+            'endpoint' => 'https://s3.wasabisys.com'
         ],
 
     ],
