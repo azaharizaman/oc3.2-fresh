@@ -53,6 +53,7 @@ return [
             'region' => env('BB_REGION'),
             'bucket' => env('BB_BUCKET'),
             'endpoint' => env('BB_ENDPOINT'),
+            'url' => env('BB_URL'),
             'visibility' => 'public'
             
         ],
@@ -92,7 +93,16 @@ return [
             'region' => env('BB_REGION'),
             'bucket' => env('BB_BUCKET'),
             'endpoint' => env('BB_ENDPOINT'),
+            'visibility' => 'public'
         ],
+        'backblaze_private' => [
+            'driver' => 's3',
+            'key' => env('BB_KEY_PRIVATE'),
+            'secret' => env('BB_SECRET_PRIVATE'),
+            'region' => env('BB_REGION'),
+            'bucket' => env('BB_BUCKET_PRIVATE'),
+            'endpoint' => env('BB_ENDPOINT'),
+        ]
 
     ],
 
