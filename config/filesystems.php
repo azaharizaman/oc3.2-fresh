@@ -48,11 +48,11 @@ return [
 
         'media' => [
             'driver' => 's3',
-            'key' => env('WAS_ACCESS_KEY_ID'),
-            'secret' => env('WAS_SECRET_ACCESS_KEY'),
-            'region' => env('WAS_DEFAULT_REGION'),
-            'bucket' => env('WAS_BUCKET'),
-            'endpoint' => env('WAS_URL'),
+            'key' => env('BB_KEY'),
+            'secret' => env('BB_SECRET'),
+            'region' => env('BB_REGION'),
+            'bucket' => env('BB_BUCKET'),
+            'endpoint' => env('BB_ENDPOINT'),
             'visibility' => 'public'
             
         ],
@@ -84,6 +84,14 @@ return [
             'region' => env('WAS_DEFAULT_REGION'),
             'bucket' => env('WAS_BUCKET'),
             'endpoint' => env('WAS_URL'),
+        ],
+        'backblaze' => [
+            'driver' => 's3',
+            'key' => env('BB_KEY'),
+            'secret' => env('BB_SECRET'),
+            'region' => env('BB_REGION'),
+            'bucket' => env('BB_BUCKET'),
+            'endpoint' => env('BB_ENDPOINT'),
         ],
 
     ],
