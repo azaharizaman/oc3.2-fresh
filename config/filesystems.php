@@ -60,11 +60,12 @@ return [
         ],
         'resources' => [
             'driver' => 's3',
-            'key' => env('WAS_ACCESS_KEY_ID'),
-            'secret' => env('WAS_SECRET_ACCESS_KEY'),
-            'region' => env('WAS_DEFAULT_REGION'),
-            'bucket' => env('WAS_BUCKET'),
-            'endpoint' => env('WAS_URL'),
+            'key' => env('BB_KEY_PUBLIC'),
+            'secret' => env('BB_SECRET_PUBLIC'),
+            'region' => env('BB_REGION'),
+            'bucket' => env('BB_BUCKET_PUBLIC'),
+            'endpoint' => env('BB_ENDPOINT'),
+            'url' => env('BB_URL_PUBLIC'),
             'visibility' => 'public',    
         ],
 
