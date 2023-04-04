@@ -38,23 +38,23 @@ return [
 
         'uploads' => [
             'driver' => 's3',
-            'key' => env('BB_KEY'),
-            'secret' => env('BB_SECRET'),
+            'key' => env('BB_KEY_PUBLIC'),
+            'secret' => env('BB_SECRET_PUBLIC'),
             'region' => env('BB_REGION'),
-            'bucket' => env('BB_BUCKET'),
+            'bucket' => env('BB_BUCKET_PUBLIC'),
             'endpoint' => env('BB_ENDPOINT'),
-            'url' => env('BB_URL'),
+            'url' => env('BB_URL_PUBLIC'),
             'visibility' => 'public'
         ],
 
         'media' => [
             'driver' => 's3',
-            'key' => env('BB_KEY'),
-            'secret' => env('BB_SECRET'),
+            'key' => env('BB_KEY_MEDIA'),
+            'secret' => env('BB_SECRET_MEDIA'),
             'region' => env('BB_REGION'),
-            'bucket' => env('BB_BUCKET'),
+            'bucket' => env('BB_BUCKET_MEDIA'),
             'endpoint' => env('BB_ENDPOINT'),
-            'url' => env('BB_URL'),
+            'url' => env('BB_URL_MEDIA'),
             'visibility' => 'public'
             
         ],
@@ -79,24 +79,7 @@ return [
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
             'throw' => false,
         ],
-        'Wasabi' => [
-            'driver' => 's3',
-            'key' => env('WAS_ACCESS_KEY_ID'),
-            'secret' => env('WAS_SECRET_ACCESS_KEY'),
-            'region' => env('WAS_DEFAULT_REGION'),
-            'bucket' => env('WAS_BUCKET'),
-            'endpoint' => env('WAS_URL'),
-        ],
-        'backblaze' => [
-            'driver' => 's3',
-            'key' => env('BB_KEY'),
-            'secret' => env('BB_SECRET'),
-            'region' => env('BB_REGION'),
-            'bucket' => env('BB_BUCKET'),
-            'endpoint' => env('BB_ENDPOINT'),
-            'visibility' => 'public'
-        ],
-        'backblaze_private' => [
+        'private' => [
             'driver' => 's3',
             'key' => env('BB_KEY_PRIVATE'),
             'secret' => env('BB_SECRET_PRIVATE'),
