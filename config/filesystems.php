@@ -102,6 +102,7 @@ return [
             'region' => env('BB_REGION'),
             'bucket' => env('BB_BUCKET_PRIVATE'),
             'endpoint' => env('BB_ENDPOINT'),
+            'url' => env('BB_URL_PRIVATE'),
         ]
 
     ],
